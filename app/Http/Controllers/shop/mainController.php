@@ -21,4 +21,12 @@ class mainController
     public function products(){
         return view('shop.products');
     }
+
+    public function contact(){
+        return view('shop.contact');
+    }
+
+    public function concept(){
+        return view('shop.concept');
+    }
 }

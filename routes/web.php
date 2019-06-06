@@ -18,3 +18,7 @@ Route::get('/product/{id}', 'Shop\MainController@product')->name('voir_produit')
 Route::get('/products', 'Shop\MainController@products')->name('voir_produits');
 
 Route::get('/category/{name}','Shop\MainController@category')->name('voir_produits_par_categorie');
+
+Route::get('/concept', 'Shop\MainController@concept')->name('concept');
+
+Route::get('/contact', 'Shop\MainController@contact')->name('contact');

@@ -49,7 +49,7 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav" id='ulNavBar'>
                             <li class="nav-item active col-3">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown col-3">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,10 +68,10 @@
                                 </div>
                             </li>
                             <li class="nav-item col-3 ">
-                                <a class="nav-link" href="#">Concept</a>
+                                <a class="nav-link" href="{{route('concept')}}">Concept</a>
                             </li>
                             <li class="nav-item col-3 ">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="{{route('contact')}}">Contact</a>
                             </li>
                         </ul>
                     </div>
