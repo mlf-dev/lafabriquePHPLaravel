@@ -1,0 +1,63 @@
+#headerDiv {
+    min-height: 160px;
+    position: relative;
+    z-index: 10;
+    background: white;
+}
+
+.logounicorn {
+    height: 60px;
+}
+
+.reseau_social_icon {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+
+/* ------------ NAVBAR ------------ */
+.menu {
+    padding:0px 0px;
+    margin:0px 0px;
+}
+.navbar {
+    margin:0px;
+    padding:0px;
+}
+#ulNavBar{
+    position: relative;
+    z-index: 10;
+    width:100%;
+    background-color: var(--mainGreen);
+    height: 2em;
+    align-items: center;
+    padding: 25px;
+    margin: 0;
+}
+
+.navItem{
+    text-align: center;
+    position:relative;
+}
+
+#ulNavBar a:link, #ulNavBar a:visited{
+    color:var(--mainGrey);
+    text-decoration:none;
+    font-size:1.3em;
+    padding:4px;
+    font-family:'Satisfy', cursive;
+}
+
+#ulNavBar a:hover, #ulNavBar a:active{
+    color:var(--mainGrey);
+    font-family:'Satisfy', cursive;
+    font-size:1.3em;
+    background: url(../img/leaf.png) no-repeat center;
+    background-color: var(--mainGreen);
+}
+.dropdown-menu {
+    left: 46%;
+    transform: translateX(-46%);
+    top: 100%;
+
+}
