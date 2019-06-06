@@ -12,7 +12,7 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/caroussel.css')}}" rel="stylesheet">
     <link href="{{asset('css/header.css')}}" rel="stylesheet">
-    <link href="{{asset('css/sousMenuProduit.css')}}" rel="stylesheet">
+    @yield('css')
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>La fabrique de Madame Ouhouh</title>
