@@ -52,8 +52,8 @@
                     <div class="card product mt-4">
                         <img src="{{asset('img/produits/'.$product->pictures->first()->nom_photo_complet)}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$product->nom}}</h5>
-                            <a href="">Plus d'infos</a>
+                            <h5 class="card-title">{{ucfirst($product->nom)}}</h5>
+                            <p class="moreInformations"><a href="">+ d'infos</a></p>
                             <p class="card-text">{{str_replace('.',',',number_format($product->prix_ht * 1.2,2))}}€</p>
                             <a href="#" class="btn btn-success buy-btn">Ajouter au panier</a>
                         </div>

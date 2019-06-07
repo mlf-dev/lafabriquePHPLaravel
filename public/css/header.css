@@ -1,5 +1,5 @@
 #headerDiv {
-    min-height: 160px;
+    min-height: 140px;
     position: relative;
     z-index: 10;
     background: white;
@@ -15,7 +15,17 @@
     margin: 5px;
 }
 
+/*----------- HEADER FAT MENU -----------*/
+#fatMenu{
+    position:fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index:10;
+}
+
 /* ------------ NAVBAR ------------ */
+
 .menu {
     padding:0px 0px;
     margin:0px 0px;
@@ -33,8 +43,11 @@
     align-items: center;
     padding: 25px;
     margin: 0;
+    border: 1px solid var(--mainGreenPolice);
 }
-
+.dropdown-menu{
+    border: 1px solid var(--mainGreenPolice);
+}
 .navItem{
     text-align: center;
     position:relative;
