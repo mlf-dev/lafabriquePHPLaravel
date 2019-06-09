@@ -1,5 +1,16 @@
 /* ------------ PRODUITS PAGE ------------ */
 
+/*---- MENU PRODUCTS LEFT ----*/
+
+#MenuLeftProduits{
+    position : fixed;
+    top : 220px;
+}
+
+#MenuLeftProduits a:link, #MenuLeftProduits a:visited {
+    color: var(--mainGrey);
+}
+
 /* Product Pub */
 .pubProduct{
     /* margin: 0 30px; */
@@ -29,7 +40,7 @@
     text-transform: uppercase;
 }
 
-#zoomProduitContainer #TitleContainerPub{
+#TitleContainerPub{
     text-align: center;
     padding: 10px 0;
     margin: 0;
@@ -39,6 +50,8 @@
     -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.42);
     box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.42);
 }
+
+/*---- PRODUITS ----*/
 .product{
     width:220px;
     height:260px;

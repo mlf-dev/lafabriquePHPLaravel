@@ -1,30 +1,56 @@
 var app = {
     init : function() {
         app.toggleMenuOnScroll();
+        app.onHoverMiniUnicorn();
     },
+    miniUnicorn : $('#miniMenuUnicorn'),
+    fatMenu : $('#fatMenu'),
+    declencheur : false,
     toggleMenuOnScroll : function() {
-        let prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
-            console.log(window.pageYOffset);
-
-            if(window.pageYOffset > 125){
-                /*let currentScrollPos = window.pageYOffset;
-                if (prevScrollpos > currentScrollPos) {
-                    document.getElementById("fatMenu").style.top = "0";
-                } else {*/
-                    document.getElementById("fatMenu").style.top = "-140px";
-/*                }
-                prevScrollpos = currentScrollPos;*/
+            if(window.pageYOffset > 130){
+                app.declencheur = true;
+                console.log(window.pageYOffset);
+                console.log(app.declencheur);
+                // app.fatMenu.stop().animate({left: "-1500px"},400, function() {
+                app.fatMenu.stop().animate({opacity: 0},400, function() {
+                    app.miniUnicorn.stop().animate({
+                        left:25
+                    },200)
+                });
+            }else if (window.pageYOffset <= 130){
+                app.fatMenu.stop().animate({opacity:1},100);
+                // app.fatMenu.stop().animate({left:0},100);
+                app.miniUnicorn.stop().animate({
+                    left:-100},100);
+                app.declencheur = false;
+                console.log(window.pageYOffset);
+                console.log(app.declencheur);
             }
-            else{
-                document.getElementById("fatMenu").style.top = "0";
-            }
-
-
         }
+    },
+    onHoverMiniUnicorn : function(){
+        app.miniUnicorn.hover( function(){
+            // app.fatMenu.stop().animate({left:0},400);
+            app.fatMenu.stop().animate({opacity:1},400);
+            app.miniUnicorn.stop().animate({
+                left:-100},200);
+        }, function() {
+                app.fatMenu.mouseleave(function(){
+                    if (app.declencheur === true) {
+                        // app.fatMenu.stop().animate({left: "-1500px"},400, function() {
+                        app.fatMenu.stop().animate({opacity: 0},400, function() {
+                            app.miniUnicorn.stop().animate({
+                                left:25
+                            },100)
+                        });
+                    }
+            })
+        });
     }
-}
+};
 
 document.onload = app.init();
+
 
 

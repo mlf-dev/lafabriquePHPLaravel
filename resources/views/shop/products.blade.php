@@ -11,10 +11,12 @@
             <div class="col-2">
                 <nav id='MenuLeftProduits'>
                     <ul>
-                        <li class='categorie allproductstitle'>Tous les produits</li>
+                        <li class='categorie allproductstitle'><a href="#">Tous les produits</a></li>
+                        <hr>
 
                         @foreach($categories as $category)
-                        <li class='categorie'><a href="">{{ucfirst($category->nom)}}</a></li>
+                        <li class='categorie'><a href="#">{{ucfirst($category->nom)}}</a></li>
+                        <br>
                         @endforeach
                     </ul>
                 </nav>
@@ -31,7 +33,7 @@
                     <div class='produitPubItemContainer  mt-2'>
                         <div class='pubProduct'>
                             <h3 class='titlePub' >Meilleure vente</h3>
-                            <img src="{{asset('img/produits/dentifrice_charbon.jpeg')}}" width= "300px" height="200px" alt="meilleure vente">
+                            <img src="{{asset('img/produits/dentifrice_charbon.jpeg')}}" width= "300px" height="150px" alt="meilleure vente">
                         </div>
                         <h4 class='productName'>Dentifrice solide aux HE</h4>
                     </div>
@@ -39,7 +41,7 @@
                     <div class='produitPubItemContainer  mt-2'>
                         <div class='pubProduct'>
                             <h3 class='titlePub'>Produit du mois</h3>
-                            <img src="{{asset('img/produits/shampoing_solide.jpeg')}}" width= "300px" height="200px" alt="produit du mois">
+                            <img src="{{asset('img/produits/shampoing_solide.jpeg')}}" width= "300px" height="150px" alt="produit du mois">
                         </div>
                         <h4 class='productName'>Shampooing aux HE</h4>
                     </div>
@@ -65,4 +67,8 @@
         </div>
     </div>
 
+@endsection
+
+@section('javasript')
+    <script src="{{asset('js/jquery.js')}}"></script>
 @endsection
